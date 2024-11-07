@@ -1,29 +1,24 @@
 // src/App.js
 import React from 'react';
-import NavRoute from './route/nav'
+import Navbar from './route/nav'
 import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Gallery from './pages/gallary';
+import InputForm from './pages/InputQueue';
+import DataDisplay from './pages/ShowDataQueue';
 
 const App = () => {
   return (
-    <div className="container-fuid">
-      {/* Navbar */}
-      <NavRoute />
-
-      {/* Card Example */}
-      <div className='container text-center'>
-        <div className="row">
-          <div className="col-2">
-          </div>
-          <div className="col-lg-8">
-            <div><Home /></div>
-          </div>
-          <div className="col-2">
-          </div>
-        </div>
-
-      </div>
-
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/dataDisplay" element={<DataDisplay />} />
+        <Route path="/JobQueue" element={<InputForm />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './nav.css'
 
 const navRoute = () => {
@@ -11,10 +12,16 @@ const navRoute = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a className="nav-link" href="/">Home</a>
+                        <Link className="nav-link" to="/">หน้าแรก</Link>
+                    </li>
+                    {/* <li className="nav-item">
+                        <Link className="nav-link" to="/gallary">gallary</Link>
+                    </li> */}
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/dataDisplay">คิวงาน</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/">gallary</a>
+                        <Link className="nav-link" to="/JobQueue">ลงคิวงาน</Link>
                     </li>
                 </ul>
             </div>
