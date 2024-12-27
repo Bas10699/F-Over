@@ -50,14 +50,10 @@ function DataDisplay() {
       {/* แสดงข้อมูล */}
       <div className="row">
         {data.map((item) => (
-          <div className="col-12 col-md-6 col-lg-4 mb-4" key={item.id}>
-            <div className="card shadow-sm border-light rounded">
-              <div className="card-body">
+          <div className="" key={item.id}>
                 <h5 className="card-title">{item.name}</h5>
-                <p className="card-text"><strong>ที่อยู่:</strong> {item.address}</p>
-                <p className="card-text"><strong>เบอร์โทร:</strong> {item.phone}</p>
-                <p className="card-text"><strong>วันที่:</strong> {item.date}</p>
-                <p className="card-text"><strong>ชุดที่:</strong> {item.set}</p>
+                <div className="card-text"><strong>วันที่:</strong> {item.date}</div>
+                <div className="card-text"><strong>ชุดที่:</strong> {item.set}</div>
                 
                 {/* ปุ่มลบข้อมูล */}
                 <button
@@ -67,8 +63,7 @@ function DataDisplay() {
                   ลบข้อมูล
                 </button>
               </div>
-            </div>
-          </div>
+
         ))}
       </div>
     </div>
